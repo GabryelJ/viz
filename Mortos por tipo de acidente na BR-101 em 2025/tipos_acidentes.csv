@@ -1,0 +1,15 @@
+tipo_acidente,SUM de mortos,cor
+Atropelamento de Pedestre,164, #56C009
+Colisão frontal,150, #0061DC
+Colisão traseira,108, #97AFEA
+Colisão transversal,66, #9B9959
+Colisão com objeto,61, #C29FD1
+Saída de leito carroçável,59, #F73DB9
+Tombamento,46, #79AC71
+Colisão lateral mesmo sentido,37, #B97191
+Colisão lateral sentido oposto,23, #4BEBFE
+Queda de ocupante de veículo,19, #2C3650
+Capotamento,12, #F50C99
+Atropelamento de Animal,9, #ED1730
+Engavetamento,5, #7741B3
+Derramamento de carga,1, #500328
