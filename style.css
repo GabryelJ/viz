@@ -1,0 +1,258 @@
+:root {
+  --asfalto: #161616;
+  --painel: #1e1e1e;
+  --amarelo: #ffd400;
+  --texto: #eee;
+  --suave: #aaa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--asfalto);
+  color: var(--texto);
+  font-family: "Highway Gothic", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px 28px;
+  background: #0e0e0e;
+  border-bottom: 4px solid var(--amarelo);
+}
+
+.marca {
+  color: var(--amarelo);
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.topo nav a {
+  color: var(--texto);
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  border-bottom: 3px solid transparent;
+}
+.topo nav a:hover,
+.topo nav a.ativo {
+  color: var(--amarelo);
+  border-color: var(--amarelo);
+}
+
+.pagina {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+h1 {
+  color: var(--amarelo);
+  font-size: 36px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 4px 0 8px;
+}
+
+.etapa {
+  color: var(--suave);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 14px;
+}
+
+.historia {
+  font-size: 20px;
+  max-width: 780px;
+  color: #ddd;
+  margin: 10px 0 20px;
+}
+.historia strong {
+  color: var(--amarelo);
+  font-weight: normal;
+}
+
+.faixa {
+  height: 4px;
+  margin: 6px 0 22px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--amarelo) 0 22px,
+    transparent 22px 36px
+  );
+}
+
+.grafico {
+  background: var(--painel);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.passos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--amarelo);
+  color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 10px 22px;
+  border: 3px solid #111;
+  outline: 3px solid var(--amarelo);
+  border-radius: 8px;
+}
+.btn:hover {
+  filter: brightness(1.12);
+}
+
+/* home */
+.hero {
+  padding: 36px 0 8px;
+}
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.1;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin: 28px 0;
+}
+
+.card {
+  background: var(--painel);
+  border: 3px solid var(--amarelo);
+  border-radius: 14px;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card .num {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--amarelo);
+  color: #111;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.card h2 {
+  margin: 0 0 6px;
+  color: var(--amarelo);
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+.card p {
+  margin: 0;
+  color: #ccc;
+}
+
+/* gráfico 1 — causas */
+.causa {
+  font-size: 12px;
+  fill: #cfcfcf;
+}
+
+.valor {
+  font-size: 16px;
+  font-weight: bold;
+  fill: #fff;
+}
+
+.estrada:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+/* gráfico 2 — tipos */
+.celula {
+  transition: opacity 0.15s;
+}
+
+.legenda-item {
+  cursor: pointer;
+}
+
+.legenda-nome {
+  fill: #eee;
+  font-size: 12px;
+}
+
+.legenda-valor {
+  fill: var(--amarelo);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.nota {
+  fill: #aaa;
+  font-size: 11px;
+}
+
+.total-num {
+  fill: #fff;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.total-txt {
+  fill: #ccc;
+  font-size: 12px;
+}
+
+/* gráfico 3 — trechos */
+.rotulo {
+  fill: #eee;
+  font-size: 14px;
+  text-anchor: end;
+}
+.grade line {
+  stroke: #333;
+}
+.grade text {
+  fill: #999;
+  font-size: 12px;
+  text-anchor: middle;
+}
+.pino-num {
+  fill: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-anchor: middle;
+}
